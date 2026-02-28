@@ -13,26 +13,27 @@ from tensorflow.keras.preprocessing import image
 
 # Load the MobileNetV2 model with pretrained weights from ImageNet
 model = MobileNetV2(weights="imagenet")
-img_path = "test_images/test.jpg"
 
-# Load and resize image to 224x224 pixels (required input size for MobileNetV2)
-img = image.load_img(img_path, target_size=(224, 224))
+def predict_dish(img_path):
 
-# Convert the image to a numpy array tensor suitable for model input (224, 224, 3)
-img_array = image.img_to_array(img)
+    # Load and resize image to 224x224 pixels (required input size for MobileNetV2)
+    img = image.load_img(img_path, target_size=(224, 224))
 
-# Add batch dimension to the image array (1, 224, 224, 3) since model expects batches of images
-img_array = np.expand_dims(img_array, axis=0)
+    # Convert the image to a numpy array tensor suitable for model input (224, 224, 3)
+    img_array = image.img_to_array(img)
 
-# Preprocess image to match the input format expected by MobileNetV2 (scales pixel values to [-1, 1])
-img_array = preprocess_input(img_array)
+    # Add batch dimension to the image array (1, 224, 224, 3) since model expects batches of images
+    img_array = np.expand_dims(img_array, axis=0)
 
-# Run prediction representing the model's confidence in each of the 1000 ImageNet classes
-predictions = model.predict(img_array)
+    # Preprocess image to match the input format expected by MobileNetV2 (scales pixel values to [-1, 1])
+    img_array = preprocess_input(img_array)
 
-# Decode predictions (top 3)
-decoded = decode_predictions(predictions, top=3)[0]
+    # Run prediction representing the model's confidence in each of the 1000 ImageNet classes
+    predictions = model.predict(img_array)
 
-print("Top Predictions:")
-for pred in decoded:
-    print(f"{pred[1]}: {pred[2]*100:.2f}%")
+    # Decode predictions (top 1) to get the most likely dish name and its confidence score
+    decoded = decode_predictions(predictions, top=1)[0][0] 
+
+    dish_name = decoded[1] # Get the predicted dish name (second element of the tuple)
+    confidence = float(decoded[2])
+    return dish_name, confidence
