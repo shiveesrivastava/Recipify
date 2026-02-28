@@ -1,0 +1,17 @@
+{
+  "pizza": {
+    "base": ["flour", "tomato sauce", "mozzarella cheese", "olive oil"],
+    "variants": {
+      "cheese": ["extra mozzarella cheese"],
+      "pepperoni": ["pepperoni"]
+    }
+  },
+
+  "carbonara": {
+    "base": ["spaghetti", "egg", "parmesan cheese", "black pepper"],
+    "variants": {
+      "classic": ["guanciale"],
+      "bacon": ["bacon"]
+    }
+  }
+}
