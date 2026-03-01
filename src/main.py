@@ -1,11 +1,17 @@
 from model.mobilenet_inference import predict_dish
 from utils.ingredient_mapper import get_ingredients
+import os
+import sys
 
 CONFIDENCE_THRESHOLD = 0.60
 
 
 def main():
-    image_path = "../test_images/test3.jpg"
+    BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+    if len(sys.argv) < 2:
+        print("Usage: python main.py <image_path>")
+        return
+    image_path = sys.argv[1]
 
     dish, confidence = predict_dish(image_path)
 

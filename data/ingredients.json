@@ -13,5 +13,31 @@
       "classic": ["guanciale"],
       "bacon": ["bacon"]
     }
+  },
+
+  "burrito": {
+    "base": ["tortilla", "rice", "beans", "meat", "cheese"],
+    "variants": {}
+  },
+
+  "cheeseburger": {
+    "base": ["burger bun", "beef patty", "cheddar cheese", "lettuce", "tomato"],
+    "variants": {
+      "double": ["extra beef patty"],
+      "bacon": ["bacon"]
+    }
+  },
+
+  "pretzel": {
+    "base": ["flour", "yeast", "salt", "water"],
+    "variants": {}
+  },
+
+  "ice_cream": {
+    "base": ["milk", "cream", "sugar"],
+    "variants": {
+      "chocolate": ["cocoa powder"],
+      "strawberry": ["strawberries"]
+    }
   }
 }
