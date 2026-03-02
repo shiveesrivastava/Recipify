@@ -1,0 +1,122 @@
+{
+  "margherita_pizza": {
+    "dish_type": "pizza",
+    "ingredients": [
+      "pizza_dough",
+      "tomato_sauce",
+      "mozzarella",
+      "basil",
+      "olive_oil"
+    ],
+    "instructions": [
+      "Preheat oven to 220°C.",
+      "Spread tomato sauce over the dough.",
+      "Add mozzarella and basil.",
+      "Bake for 12-15 minutes.",
+      "Drizzle olive oil before serving."
+    ]
+  },
+
+  "pepperoni_pizza": {
+    "dish_type": "pizza",
+    "ingredients": [
+      "pizza_dough",
+      "tomato_sauce",
+      "mozzarella",
+      "pepperoni"
+    ],
+    "instructions": [
+      "Preheat oven to 220 degree Celcius.",
+      "Spread sauce over dough.",
+      "Add mozzarella and pepperoni.",
+      "Bake for 15 minutes."
+    ]
+  },
+
+  "classic_carbonara": {
+    "dish_type": "carbonara",
+    "ingredients": [
+      "spaghetti",
+      "egg",
+      "parmesan",
+      "pancetta",
+      "black_pepper"
+    ],
+    "instructions": [
+      "Cook spaghetti.",
+      "Fry pancetta.",
+      "Mix egg and parmesan.",
+      "Combine everything off heat.",
+      "Add black pepper."
+    ]
+  },
+
+  "chicken_burrito": {
+    "dish_type": "burrito",
+    "ingredients": [
+      "tortilla",
+      "chicken",
+      "rice",
+      "beans",
+      "cheese",
+      "salsa"
+    ],
+    "instructions": [
+      "Cook chicken with spices.",
+      "Warm tortilla.",
+      "Add rice, beans, chicken, cheese.",
+      "Wrap tightly and serve."
+    ]
+  },
+
+  "classic_cheeseburger": {
+    "dish_type": "cheeseburger",
+    "ingredients": [
+      "burger_bun",
+      "beef_patty",
+      "cheddar",
+      "lettuce",
+      "tomato",
+      "onion"
+    ],
+    "instructions": [
+      "Grill beef patty.",
+      "Toast buns.",
+      "Add cheese to patty.",
+      "Assemble with vegetables."
+    ]
+  },
+
+  "soft_pretzel": {
+    "dish_type": "pretzel",
+    "ingredients": [
+      "flour",
+      "yeast",
+      "water",
+      "salt",
+      "baking_soda"
+    ],
+    "instructions": [
+      "Prepare dough.",
+      "Shape into pretzels.",
+      "Boil briefly in baking soda water.",
+      "Bake until golden."
+    ]
+  },
+
+  "vanilla_ice_cream": {
+    "dish_type": "ice_cream",
+    "ingredients": [
+      "milk",
+      "cream",
+      "sugar",
+      "vanilla_extract"
+    ],
+    "instructions": [
+      "Mix milk, cream, sugar.",
+      "Add vanilla.",
+      "Churn in ice cream maker.",
+      "Freeze until firm."
+    ]
+  }
+}

@@ -1,43 +1,93 @@
 {
   "pizza": {
-    "base": ["flour", "tomato sauce", "mozzarella cheese", "olive oil"],
+    "base": [
+      "pizza_dough",
+      "tomato_sauce",
+      "mozzarella",
+      "olive_oil"
+    ],
     "variants": {
-      "cheese": ["extra mozzarella cheese"],
-      "pepperoni": ["pepperoni"]
+      "cheese": [
+        "mozzarella"
+      ],
+      "pepperoni": [
+        "pepperoni"
+      ]
     }
   },
 
   "carbonara": {
-    "base": ["spaghetti", "egg", "parmesan cheese", "black pepper"],
+    "base": [
+      "spaghetti",
+      "egg",
+      "parmesan",
+      "black_pepper"
+    ],
     "variants": {
-      "classic": ["guanciale"],
-      "bacon": ["bacon"]
+      "classic": [
+        "pancetta"
+      ],
+      "bacon": [
+        "bacon"
+      ]
     }
   },
 
   "burrito": {
-    "base": ["tortilla", "rice", "beans", "meat", "cheese"],
+    "base": [
+      "tortilla",
+      "rice",
+      "beans",
+      "chicken",
+      "cheese"
+    ],
     "variants": {}
   },
 
   "cheeseburger": {
-    "base": ["burger bun", "beef patty", "cheddar cheese", "lettuce", "tomato"],
+    "base": [
+      "burger_bun",
+      "beef_patty",
+      "cheddar",
+      "lettuce",
+      "tomato",
+      "onion"
+    ],
     "variants": {
-      "double": ["extra beef patty"],
-      "bacon": ["bacon"]
+      "double": [
+        "beef_patty"
+      ],
+      "bacon": [
+        "bacon"
+      ]
     }
   },
 
   "pretzel": {
-    "base": ["flour", "yeast", "salt", "water"],
+    "base": [
+      "flour",
+      "yeast",
+      "salt",
+      "water",
+      "baking_soda"
+    ],
     "variants": {}
   },
 
   "ice_cream": {
-    "base": ["milk", "cream", "sugar"],
+    "base": [
+      "milk",
+      "cream",
+      "sugar",
+      "vanilla_extract"
+    ],
     "variants": {
-      "chocolate": ["cocoa powder"],
-      "strawberry": ["strawberries"]
+      "chocolate": [
+        "cocoa_powder"
+      ],
+      "strawberry": [
+        "strawberries"
+      ]
     }
   }
 }

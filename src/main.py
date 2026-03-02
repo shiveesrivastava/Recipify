@@ -1,5 +1,6 @@
 from model.mobilenet_inference import predict_dish
 from utils.ingredient_mapper import get_ingredients
+from utils.recommendation_engine import recommend_recipe
 import os
 import sys
 
@@ -31,7 +32,22 @@ def main():
     print("\nIngredients:")
     for item in ingredients:
         print(f"- {item}")
+    
+    recipe = recommend_recipe(
+        predicted_ingredients=ingredients,
+        dish_type=dish
+    )
 
+    if recipe is None:
+        print("\nNo recipe found.")
+        return
+
+    print(f"\nRecommended Recipe: {recipe['name']}")
+    print(f"Match Score: {round(recipe['score'], 2)}")
+
+    print("\nInstructions:")
+    for step in recipe["instructions"]:
+        print(f"- {step}")
 
 if __name__ == "__main__":
     main()
