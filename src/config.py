@@ -1,0 +1,2 @@
+MODEL_TYPE = "pytorch" 
+CONFIDENCE_THRESHOLD = 0.65
