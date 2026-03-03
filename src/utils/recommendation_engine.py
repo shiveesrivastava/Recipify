@@ -1,4 +1,4 @@
-from utils.recipe_loader import load_recipes
+from src.utils.recipe_loader import load_recipes
 
 def compute_similarity(predicted_ingredients, recipe_ingredients):
     # Computes a similarity score based on ingredient overlap
