@@ -10,6 +10,13 @@ app = FastAPI(title="Recipify API")
 UPLOAD_DIR = "temp_uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+@app.get("/health")
+def health_check():
+    return {
+        "status": "ok",
+        "service": "recipify-api"
+    }
+
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_image(file: UploadFile = File(...)):
     
